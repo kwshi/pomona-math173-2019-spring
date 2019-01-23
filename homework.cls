@@ -60,28 +60,30 @@
 }
 
 %% document metadata
-\newcommand{\thecourse}{Math 173 -- Fall 2018}
+\newcommand{\thecourse}{Math 173}
+\newcommand{\theterm}{Spring 2019}
 \newcommand{\thecoauthor}{}
 \newcommand{\coauthor}[1]{\renewcommand{\thecoauthor}{#1}}
+\newcommand{\homework}[1]{\newcommand{\thehomework}{#1}}
 
 %% page decoration
 \fancypagestyle{first}{
   \fancyhf{}
   \chead{
-    \textbf{\thetitle} \\
-    {\small\textsc{\thecourse}} \\
+    \textbf{Homework \thehomework}\\
+    {\small\textsc{\thecourse{} -- \theterm}}\\
     {\small\textsc{due at the beginning of class on \underline{\thedate}}}
   }
-  \rhead{{\small\theauthor} \\ \mbox{\scriptsize\thecoauthor} \\}
-  \lhead{\small\textsc{\thepage\ of \pageref{LastPage}} \\ \ \\}
+  \rhead{{\small\theauthor}\\\mbox{\small\thecoauthor}\\}
+  \lhead{{\small\textsc{\thepage\ of \pageref{LastPage}}}\\\mbox{}\\}
   \renewcommand{\headrulewidth}{0pt}
 }
 
 \fancypagestyle{rest}{
   \fancyhf{}
-  \chead{\small \textsc{\thecourse}}
-  \rhead{\small \theauthor}
-  \lhead{\small \textsc{\thepage\ of \pageref{LastPage}}}
+  \chead{\small\textsc{\thecourse{} -- \theterm}}
+  \rhead{\small\theauthor}
+  \lhead{\small\textsc{\thepage\ of \pageref{LastPage}}}
   \renewcommand{\headrulewidth}{0pt}
 }
 
