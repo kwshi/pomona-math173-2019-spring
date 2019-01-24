@@ -49,8 +49,8 @@
 \geometry{
   top=.5in,
   bottom=.75in,
-  right=1.5in,
-  left=1.5in,
+  right=1in,
+  left=1in,
   headheight=3em,
   headsep=1em,
   marginparwidth=1.125in,
