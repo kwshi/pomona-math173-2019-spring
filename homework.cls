@@ -73,7 +73,7 @@
     {\small\textsc{\thecourse{} -- \theterm}}\\
     {\small\textsc{due at the beginning of class on \underline{\thedate}}}
   }
-  \rhead{{\small\theauthor}\\\mbox{\small\thecoauthor}\\}
+  \rhead{\mbox{\small\theauthor}\\\mbox{\small\thecoauthor}\\}
   \lhead{{\small\textsc{\thepage\ of \pageref{LastPage}}}\\\mbox{}\\}
   \renewcommand{\headrulewidth}{0pt}
 }
