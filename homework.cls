@@ -135,8 +135,16 @@
 }
 
 % math commands
+
+%% vector and matrix bold fonts
 \renewcommand{\vec}{\mathbfit}
 \newcommand{\mat}{\mathbf}
+
+%% linear algebra operators
+\DeclareMathOperator{\adj}{adj}
+\DeclareMathOperator{\rank}{rank}
+\DeclareMathOperator{\col}{col}
+\DeclareMathOperator{\row}{row}
 
 %% common blackboard-bold symbols
 \newcommand{\ZZ}{\mathbb Z}
@@ -150,7 +158,9 @@
 
 % transpose and complement
 \newcommand{\T}{\mathsf{T}}
-\renewcommand{\complement}{\mathsf{C}}
+\newcommand{\M}{\mathsf{M}}
+\newcommand{\C}{\mathsf{C}}
+\renewcommand{\complement}{\C}
 
 %% differential operators
 \newcommand{\odif}{\mathop{}\! \mathrm d}
@@ -161,15 +171,28 @@
 \newcommand{\pd}[3][]{\frac{\pdif^{#1} {#2}}{\pdif {#3}^{#1}}}
 
 %% brackets & delimiters
-\newcommand{\abs}[1]{\left\lvert {#1} \right\rvert}
-\newcommand{\norm}[1]{\left\lVert {#1} \right\rVert}
-\newcommand{\abracket}[1]{\left\langle {#1} \right\rangle}
+\newcommand{\abs}[1]{\lvert {#1} \rvert}
+\newcommand{\norm}[1]{\lVert {#1} \rVert}
+\newcommand{\abracket}[1]{\langle {#1} \rangle}
 \newcommand{\inner}{\abracket}
-\newcommand{\floor}[1]{\left\lfloor {#1} \right\rfloor}
-\newcommand{\ceil}[1]{\left\lceil {#1} \right\rceil}
-\newcommand{\paren}[1]{\left( {#1} \right)}
-\newcommand{\bracket}[1]{\left[ {#1} \right]}
-\newcommand{\curly}[1]{\left\{ {#1} \right\}}
+\newcommand{\floor}[1]{\lfloor {#1} \rfloor}
+\newcommand{\ceil}[1]{\lceil {#1} \rceil}
+\newcommand{\paren}[1]{( {#1} )}
+\newcommand{\bracket}[1]{[ {#1} ]}
+\newcommand{\curly}[1]{\{ {#1} \}}
 \newcommand{\set}{\curly}
-\newcommand{\eval}[1]{\bigg\rvert_{#1}}
 \newcommand{\setst}[2]{\set{{#1} \; : \; {#2}}}
+
+\newcommand{\Abs}[1]{\left\lvert {#1} \right\rvert}
+\newcommand{\Norm}[1]{\left\lVert {#1} \right\rVert}
+\newcommand{\Abracket}[1]{\left\langle {#1} \right\rangle}
+\newcommand{\Inner}{\Abracket}
+\newcommand{\Floor}[1]{\left\lfloor {#1} \right\rfloor}
+\newcommand{\Ceil}[1]{\left\lceil {#1} \right\rceil}
+\newcommand{\Paren}[1]{\left( {#1} \right)}
+\newcommand{\Bracket}[1]{\left[ {#1} \right]}
+\newcommand{\Curly}[1]{\left\{ {#1} \right\}}
+\newcommand{\Set}{\Curly}
+\newcommand{\Setst}[2]{\Set{{#1} \; : \; {#2}}}
+
+\newcommand{\eval}[1]{\bigg\rvert_{#1}}
