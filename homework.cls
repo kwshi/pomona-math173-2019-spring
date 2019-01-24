@@ -96,7 +96,7 @@
 \hypersetup{
   colorlinks=true,
   urlcolor=blue!50!green,
-  linkcolor=blue!50!green,
+  linkcolor=black,
 }
 
 % pset-related environments & commands
