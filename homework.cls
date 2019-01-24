@@ -101,20 +101,11 @@
 
 % pset-related environments & commands
 \declaretheoremstyle[
-  bodyfont=\normalfont,
   spaceabove=1em,
-]{exercise}
-
-\declaretheorem[style=exercise]{exercise}
-
-\declaretheoremstyle[
-  bodyfont=\normalfont,
   numbered=no,
-  spaceabove=1em,
-  preheadhook=\vspace*{1em},
-]{solution}
-
-\declaretheorem[style=solution, mdframed]{solution}
+  bodyfont=\normalfont,
+  headfont=\bfseries,
+]{theorem}
 
 \declaretheoremstyle[
   spaceabove=1em,
@@ -126,11 +117,22 @@
 \declaretheorem[style=theorem]{claim}
 \declaretheorem[style=theorem]{lemma}
 \declaretheorem[style=theorem]{corollary}
-\declaretheorem[style=theorem, title=Base case]{basecase}
-\declaretheorem[style=theorem, title=Inductive step]{inductivestep}
+\declaretheorem[style=minitheorem, title=Base case]{basecase}
+\declaretheorem[style=minitheorem, title=Inductive step]{inductivestep}
+
+\newenvironment{solution}{\begin{mdframed}}{\end{mdframed}}
+\newenvironment{problem}[1][]{\par\hspace{-1in}\makebox[1in]{\hfill#1\quad}\ignorespaces}{}
 
 \newenvironment{preface}{\itshape}{\par\hrulefill}
 \newcommand{\comment}[1]{\marginnote{\scriptsize\textcolor{gray}{#1}}}
+
+% list settings
+\setlist[enumerate, 1]{label=(\alph*)}
+
+% mdframed spacing settings
+\mdfsetup{
+  skipabove=.5em,
+}
 
 % math commands
 \renewcommand{\vec}{\mathbfit}
