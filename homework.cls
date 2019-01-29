@@ -160,6 +160,7 @@
 \newcommand{\NN}{\mathbb N}
 \newcommand{\PP}{\mathbb P}
 \newcommand{\VV}{\mathbb V}
+\newcommand{\FF}{\mathbb F}
 
 % transpose and complement
 \newcommand{\T}{\mathsf{T}}
