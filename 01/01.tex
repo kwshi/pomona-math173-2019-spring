@@ -165,6 +165,7 @@
     written as
     \begin{equation}
       M^{-1}
+      =
       \begin{bmatrix}
         A^{-1} & 0 \\
         0      & D^{-1}
@@ -182,7 +183,19 @@
     \begin{solution}
     \end{solution}
 
-  \item Derive the identity from \eqref{eq:factor-block-inverse}.
+  \item Derive the identity
+    \[
+      \begin{bmatrix}
+        I_k & 0 \\
+        X   & I_{n-k}
+      \end{bmatrix}
+      ^{-1} =
+      \begin{bmatrix}
+        I_k & 0 \\
+        -X  & I_{n-k}
+      \end{bmatrix}
+    \]
+    from \eqref{eq:block-inverse}.
 
     \begin{solution}
     \end{solution}
