@@ -145,6 +145,11 @@
 \DeclareMathOperator{\rank}{rank}
 \DeclareMathOperator{\col}{col}
 \DeclareMathOperator{\row}{row}
+\DeclareMathOperator{\cols}{cols}
+\DeclareMathOperator{\rows}{rows}
+\DeclareMathOperator{\colspace}{colspace}
+\DeclareMathOperator{\rowspace}{rowspace}
+\DeclareMathOperator{\spn}{span}
 
 %% common blackboard-bold symbols
 \newcommand{\ZZ}{\mathbb Z}
