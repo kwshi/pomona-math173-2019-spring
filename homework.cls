@@ -34,6 +34,7 @@
 \RequirePackage{multicol}
 \RequirePackage{color}
 \RequirePackage{tikz}
+\RequirePackage{pgfplots}
 \RequirePackage{hyperref}
 \RequirePackage{marginnote}
 \RequirePackage{isomath}
@@ -133,6 +134,10 @@
 \mdfsetup{
   skipabove=.5em,
 }
+
+% tikz settings
+\usetikzlibrary{calc}
+\usepgfplotslibrary{groupplots}
 
 % math commands
 
