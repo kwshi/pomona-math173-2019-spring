@@ -1,0 +1,280 @@
+\documentclass{homework}
+
+\homework{2}
+\date{Tuesday 2/5}
+\author{}
+\coauthor{}
+
+\begin{document}
+\begin{description}
+\item[P.3.17]
+  Let \(A \in \M_{m\times n}\).  Use the preceding problems to show
+  that \(\rank A = r\) if and only if there are invertible
+  \(B \in \M_m\) and \(C \in M_n\) such that
+  \[
+    A = B
+    \begin{bmatrix}
+      I_r & 0 \\
+      0   & 0
+    \end{bmatrix}
+    C.
+  \]
+
+  \begin{solution}
+
+  \end{solution}
+
+\item[P.4.3]
+  Provide details for the following alternative proof of the
+  Cauchy--Schwarz inequality in a real inner product space \(V\).  For
+  nonzero vectors \(\vec u, \vec v \in V\), consider the function
+  \(p(t) = \norm{t \vec u + \vec v}^2\) of a real variable \(t\).
+  \begin{enumerate}
+  \item Why is \(p(t) \ge 0\) for all real \(t\)?
+
+    \begin{solution}
+
+    \end{solution}
+
+  \item If \(p(t) = 0\) has a real root, why are \(\vec u\) and
+    \(\vec v\) linearly dependent?
+
+    \begin{solution}
+
+    \end{solution}
+
+  \item Show that \(p\) is a polynomial
+    \[
+      p(t) =
+      \norm{\vec u}^2 t^2        +
+      2 \inner{\vec u, \vec v} t +
+      \norm{v}^2
+    \]
+    of degree \(2\) with real coefficients,
+
+    \begin{solution}
+
+    \end{solution}
+
+  \item If \(\vec u\) and \(\vec v\) are linearly independent, why
+    does \(p(t) = 0\) have no real roots?
+
+    \begin{solution}
+
+    \end{solution}
+
+  \item Use the quadratic formula to deduce the Cauchy--Schwarz
+    inequality for a real inner product space.
+
+    \begin{solution}
+
+    \end{solution}
+  \end{enumerate}
+
+\item[P.4.4]
+  Modify the argument in the preceding problem to prove the
+  Cauchy--Schwarz inequality in a complex inner product space \(V\).
+  Redefine \(p(t) = \norm{t \vec u + e^{i\theta} \vec v}^2\), in which
+  \(\theta\) is a real parameter such that
+  \(e^{-i\theta} \inner{\vec u, \vec v} = \abs{\inner{u, v}}\).
+  \begin{enumerate}
+  \item Explain why such a choice of \(\theta\) is possible and why
+    \[
+      p(t) =
+      \norm{\vec u}^2 t^2    +
+      2 \abs{\inner{u, v}} t +
+      \norm{\vec v}^2,
+    \]
+    a polynomial of degree \(2\) with real coefficients.
+
+    \begin{solution}
+
+    \end{solution}
+
+  \item If \(\vec u\) and \(\vec v\) are linearly independent, why
+    does \(p(t) = 0\) have no real roots?
+
+    \begin{solution}
+
+    \end{solution}
+
+  \item Use the quadratic formula to deduce the Cauchy--Schwarz
+    inequality for a complex inner product space.
+
+    \begin{solution}
+
+    \end{solution}
+  \end{enumerate}
+
+\item[P.4.10]
+  Let \(\VV\) be an \(\FF\)--inner product space and let
+  \(\vec u, \vec v \in \VV\).  Prove that \(\vec u\) and \(\vec v\)
+  are orthogonal if and only if
+  \(\norm{\vec v} \le \norm{c \vec u + \vec v}\) for all
+  \(c \in \FF\).  Be sure your proof covers both cases \(\FF = \RR\)
+  and \(\FF = \CC\).  Draw a diagram illustrating what this means if
+  \(\VV = \RR^2\).
+
+  \begin{solution}
+
+  \end{solution}
+
+\item[P.4.11]
+  \begin{enumerate}
+  \item Let \(f, g \in C_\RR [0, 1]\) (see Example 4.4.8) be the
+    functions depicted in Figure 4.9.  Does there exist a
+    \(c \in \RR\) such that \(\norm{f + cg} < \norm f\)?
+
+    \begin{solution}
+
+    \end{solution}
+
+  \item Consider the functions \(f(x) = x(1-x)\) and
+    \(g(x) = \sin(2\pi x)\) in \(C_\RR [0, 1]\).  Does there exist a
+    \(c \in \RR\) such that \(\norm{f + cg} < \norm f\)?
+
+    \begin{solution}
+
+    \end{solution}
+  \end{enumerate}
+  \begin{center}
+    \pgfplotsset{
+      depicted function/.style={
+        width=3in,
+        height=2in,
+        axis lines=left,
+        yticklabel style={
+          /pgf/number format/.cd,
+          fixed,
+          precision=3,
+        },
+        scaled ticks=false,
+        font=\small,
+      },
+    }
+    \hfil
+    \begin{tikzpicture}
+      \begin{axis}[depicted function]
+        \addplot[domain=0:1, samples=256] {
+          exp(-((x-.5) / .25)^2) *
+          (20 - 2.5 * cos(360*24*x))
+        };
+      \end{axis}
+    \end{tikzpicture}
+    \hfil
+    \begin{tikzpicture}
+      \begin{axis}[
+        depicted function,
+        ytick distance=.005,
+        ]
+        \addplot[domain=0:1, samples=385] {
+          x * (1-x) *
+          (1 - cos(360*24*x)) *
+          .028 / .5
+        };
+
+      \end{axis}
+    \end{tikzpicture}
+    \hfil
+  \end{center}
+
+\item[P.4.23]
+  Let \(\VV = P_n\), \(p(z) = \sum_{k=0}^n p_k z^k\) and
+  \(q(z) = \sum_{k=0}^n q_k z^k\); define
+  \[
+    \inner{p, q} = \sum_{i,j=0}^n \frac{p_i \conj{q_j}}{i+j+1}.
+  \]
+  \begin{enumerate}
+  \item Show that
+    \(\inner{\cdot, \cdot} \colon \VV \times \VV \to \CC\) is an inner
+    product.
+
+    \begin{solution}
+
+    \end{solution}
+
+  \item Deduce that the matrix
+    \(A = \begin{bmatrix} (i+j-1)^{-1} \end{bmatrix}\) has the
+    property that \(\inner{A \vec x, \vec x} \ge 0\) for all
+    \(\vec x \in \CC^n\).
+
+    \begin{solution}
+
+    \end{solution}
+  \end{enumerate}
+
+
+\item[P.5.6*]
+  Let \(\vec u_1, \vec u_2, \dots, \vec u_n\) be an orthonormal system
+  in an \(\FF\)--inner product space \(\VV\).
+  \begin{enumerate}
+  \item Prove that
+    \[
+      \norm{\vec v - \sum_{i=1}^n a_i \vec u_i}^2 =
+      \norm{\vec v}^2 -
+      \sum_{i=1}^n \abs{\inner{\vec v, \vec u_i}}^2 +
+      \sum_{i=1}^n \abs{\inner{\vec v, \vec u_i} - a_i}^2
+      \tag{5.9.1}
+    \]
+    for all \(a_1, a_2, \dots, a_n \in \FF\) and all \(\vec v \in V\).
+
+    \begin{solution}
+
+    \end{solution}
+
+  \item Let \(\vec v \in \VV\) be given and let
+    \(\WW = \spn\set{\vec u_1, \vec u_2, \dots, \vec u_n}\).  Prove
+    that there is a unique \(\vec x \in \WW\) such that
+    \(\norm{\vec v - \vec x} \le \norm{\vec v - \vec w}\) for all
+    \(\vec w \in \WW\).  Why is
+    \(\vec x = \sum_{i=1}^n \inner{\vec v, \vec u_i} \vec u_i\)?  This
+    vector \(\vec x\) is the orthogonal projection of \(\vec v\) onto
+    the subspace \(\WW\); see Section 7.3.
+
+    \begin{solution}
+
+    \end{solution}
+
+  \item Deduce Bessel's inequality (5.7.5) from (5.9.1).
+
+    \begin{solution}
+
+    \end{solution}
+  \end{enumerate}
+
+\item[P.5.7]
+  Let \(\vec u_1, \vec u_2, \dots, \vec u_n\) be an orthonormal system
+  in an \(\FF\)--inner product space \(\VV\), let
+  \(\UU = \spn\set{\vec u_1, \vec u_2, \dots, \vec u_n}\), and let
+  \(\vec v \in \VV\).  Provide details for the following approach to
+  Bessel's inequality (5.7.5):
+  \begin{enumerate}
+  \item If \(\vec v \in U\), why is
+    \(\norm{\vec v}^2 = \sum_{i=1}^n \abs{\inner{\vec v, \vec
+        u_i}}^2\)?
+
+    \begin{solution}
+
+    \end{solution}
+
+  \item Suppose that \(v \not\in U\), let
+    \(\WW = \spn\set{\vec u_1, \vec u_2, \dots, \vec u_n, \vec v}\),
+    and apply the Gram--Schmidt process to the linearly independent
+    list \(\vec u_1, \vec u_2, \dots, \vec u_n, \vec v\).  Why do you
+    obtain an orthonormal basis of the norm
+    \(\vec u_1, \vec u_2, \dots, \vec u_n, \vec u_{n+1}\) for \(\WW\)?
+
+    \begin{solution}
+
+    \end{solution}
+
+  \item Why is
+    \(\norm{\vec v}^2 = \sum_{i=1}^{n+1} \abs{\inner{\vec v, \vec
+        u_i}}^2 \ge \sum_{i=1}^n \abs{\inner{\vec v, \vec u_i}}^2\)?
+
+    \begin{solution}
+
+    \end{solution}
+  \end{enumerate}
+\end{description}
+\end{document}
