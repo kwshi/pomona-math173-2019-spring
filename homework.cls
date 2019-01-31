@@ -169,6 +169,8 @@
 \DeclareMathOperator{\rowspace}{rowspace}
 \DeclareMathOperator{\spn}{span}
 
+\newcommand{\conj}{\overline}
+
 %% common blackboard-bold symbols
 \newcommand{\ZZ}{\mathbb Z}
 \newcommand{\RR}{\mathbb R}
@@ -177,7 +179,9 @@
 \newcommand{\KK}{\mathbb K}
 \newcommand{\NN}{\mathbb N}
 \newcommand{\PP}{\mathbb P}
+\newcommand{\UU}{\mathbb U}
 \newcommand{\VV}{\mathbb V}
+\newcommand{\WW}{\mathbb W}
 \newcommand{\FF}{\mathbb F}
 
 % transpose and complement
