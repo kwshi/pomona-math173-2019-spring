@@ -122,12 +122,25 @@
 \declaretheorem[style=minitheorem, title=Inductive step]{inductivestep}
 
 \newenvironment{solution}{\begin{mdframed}}{\end{mdframed}}
+
+%% standalone problem environment: obsolete but kept for backwards-compatibility
 \newenvironment{problem}[1][]{\par\hspace{-1in}\makebox[1in]{\hfill#1\quad}\ignorespaces}{}
 
 \newenvironment{preface}{\itshape}{\par\hrulefill}
 \newcommand{\comment}[1]{\marginnote{\scriptsize\textcolor{gray}{#1}}}
 
 % list settings
+
+%% for problem statements
+\setlist[description, 1]{
+  labelwidth=1in,
+  align=right,
+  leftmargin=0pt,
+  labelsep=1em,
+  labelindent=!
+}
+
+%% subproblems
 \setlist[enumerate, 1]{label=(\alph*)}
 
 % mdframed spacing settings
