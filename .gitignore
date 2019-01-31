@@ -243,3 +243,7 @@ TSWLatexianTemp*
 
 # ignore pdfs
 *.pdf
+
+
+# ignore automatically-generated pgfplot gnuplot output
+*.pgf-plot.gnuplot
