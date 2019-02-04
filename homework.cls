@@ -187,7 +187,6 @@
 % transpose and complement
 \newcommand{\T}{\mathsf{T}}
 \newcommand{\M}{\mathsf{M}}
-\newcommand{\C}{\mathsf{C}}
 \renewcommand{\complement}{\C}
 
 %% differential operators
