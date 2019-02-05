@@ -154,7 +154,9 @@
 
 % tikz settings
 \usetikzlibrary{calc}
+\usetikzlibrary{positioning}
 \usepgfplotslibrary{groupplots}
+\usepgfplotslibrary{fillbetween}
 
 % math commands
 
@@ -173,7 +175,16 @@
 \DeclareMathOperator{\rowspace}{rowspace}
 \DeclareMathOperator{\spn}{span}
 
+\let\Re\relax
+\DeclareMathOperator{\Re}{Re}
+
+\let\Im\relax
+\DeclareMathOperator{\Im}{Im}
+
 \newcommand{\conj}{\overline}
+
+%% special operators and relations
+\newcommand{\defeq}{\stackrel{\mathrm{def}}{=}}
 
 %% common blackboard-bold symbols
 \newcommand{\ZZ}{\mathbb Z}
@@ -227,4 +238,4 @@
 \newcommand{\Set}{\Curly}
 \newcommand{\Setst}[2]{\Set{{#1} \; : \; {#2}}}
 
-\newcommand{\eval}[1]{\bigg\rvert_{#1}}
+\newcommand{\eval}{\bigg\rvert}
