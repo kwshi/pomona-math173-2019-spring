@@ -129,6 +129,10 @@
 \newenvironment{preface}{\itshape}{\par\hrulefill}
 \newcommand{\comment}[1]{\marginnote{\scriptsize\textcolor{gray}{#1}}}
 
+\newcommand{\bookfigure}[3]{\booklabel{#1}{#2}\par{\textbf{Figure #2} {#3}}\par}
+
+\newcommand{\booklabel}[2]{\@bsphack \protected@write \@auxout {}{\string \newlabel {#1}{{{{#2}}}{\thepage}{}{}{}}}\@esphack}
+
 % list settings
 
 %% for problem statements
