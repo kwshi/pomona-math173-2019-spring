@@ -100,7 +100,32 @@
   linkcolor=black,
 }
 
+%% mdframed styles
+\mdfdefinestyle{solution}{
+  skipabove=1em,
+  skipbelow=1em,
+}
+
+\mdfdefinestyle{book}{
+  hidealllines=true,
+  backgroundcolor=lightgray!25,
+  innertopmargin=1em,
+  innerbottommargin=1em,
+  skipabove=1em,
+  skipbelow=1em,
+}
+
 % pset-related environments & commands
+\declaretheoremstyle[
+  name=Theorem,
+  headfont=\bfseries,
+  notefont=\bfseries,
+  bodyfont=\itshape,
+  notebraces={}{},
+  headformat=\NAME\NOTE,
+  mdframed={style=book},
+]{booktheorem}
+
 \declaretheoremstyle[
   spaceabove=1em,
   numbered=no,
@@ -115,13 +140,17 @@
   headfont=\scshape,
 ]{minitheorem}
 
+\declaretheorem[style=booktheorem]{booktheorem}
+
 \declaretheorem[style=theorem]{claim}
+\declaretheorem[style=theorem]{theorem}
 \declaretheorem[style=theorem]{lemma}
 \declaretheorem[style=theorem]{corollary}
 \declaretheorem[style=minitheorem, title=Base case]{basecase}
 \declaretheorem[style=minitheorem, title=Inductive step]{inductivestep}
 
-\newenvironment{solution}{\begin{mdframed}}{\end{mdframed}}
+\newmdenv[style=solution]{solution}
+\newmdenv[style=book]{book}
 
 %% standalone problem environment: obsolete but kept for backwards-compatibility
 \newenvironment{problem}[1][]{\par\hspace{-1in}\makebox[1in]{\hfill#1\quad}\ignorespaces}{}
@@ -147,14 +176,10 @@
 %% subproblems
 \setlist[enumerate, 1]{label=(\alph*)}
 
-% mdframed spacing settings
-\mdfsetup{
-  skipabove=.5em,
-}
-
 % tikz settings
 \usetikzlibrary{calc}
 \usetikzlibrary{positioning}
+\usetikzlibrary{backgrounds}
 \usepgfplotslibrary{groupplots}
 \usepgfplotslibrary{fillbetween}
 
@@ -201,6 +226,7 @@
 
 % transpose and complement
 \newcommand{\T}{\mathsf{T}}
+\newcommand{\transpose}{\intercal}
 \newcommand{\M}{\mathsf{M}}
 \newcommand{\C}{\mathsf{C}}
 \renewcommand{\complement}{\C}
