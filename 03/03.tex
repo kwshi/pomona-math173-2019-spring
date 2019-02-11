@@ -1,0 +1,184 @@
+\documentclass{homework}
+
+\homework{3}
+\date{Tuesday 2/12}
+
+\author{}
+\coauthor{}
+
+\begin{document}
+
+\begin{description}
+\item[5.11*] Let \(V = C_\RR [0, 1]\), endowed with the \(L^2\)
+  inner product \eqref{eq:l2-inner-product}, and let \(T\) be the
+  \emph{Volterra operator} on \(V\) defined by
+  \[
+    (Tf)(t) = \int_0^1 f(s) \dif s.
+    \tag{5.9.2}
+  \]
+  Show that the adjoint of \(T\) is the linear operator on \(V\)
+  defined by
+  \[
+    (T^* g)(s) = \int_s^1 g(t) \dif t.
+    \tag{5.9.3}
+  \]
+
+  \begin{book}
+    \[
+      \inner{f, g} = \int_0^1 f(t) \conj{g(t)} \dif t.
+      \tag{5.1.6}
+      \label{eq:l2-inner-product}
+    \]
+  \end{book}
+
+
+  \begin{solution}
+
+  \end{solution}
+
+\item[5.22] Let \(f \colon \RR \to \RR\) be periodic with period
+  \(2\pi\) and suppose that \(f(x) = x^2\) for \(x \in [-\pi, \pi]\);
+  see Figure 5.2.  \booklabel{problem:periodic-f}{P.5.22}
+
+
+  \begin{book}
+    \begin{center}
+      \begin{tikzpicture}[scale=2, font=\small]
+        \draw [semithick] (-2,0) -- (2,0);
+        \draw [semithick] (0,0) -- (0,1);
+
+        \foreach \x/\l in {
+          -2/\(-2\pi\),
+          -1/\(-\pi\),
+          0/,
+          1/\(\pi\),
+          2/\(2\pi\)} {
+          \draw (\x,0) node [below, text height=1.5ex] {\l} -- +(0,1pt);
+        }
+
+        \draw (0,1) node [left] {\(\pi^2\)} -- +(1pt,0);
+        \draw (0,{1/pi}) node [left] {\(\pi\)} -- +(1pt,0);
+
+        \begin{scope}[on background layer]
+          \draw [fill=lightgray]
+          (-2,0) parabola
+          (-1,1) parabola bend (0,0)
+          (1,1) parabola bend (2,0)
+          (2,0);
+        \end{scope}
+      \end{tikzpicture}
+
+      \bookfigure{fig:parabolish-f}{5.2}{The graph of the function \(f\)
+        in \ref{problem:periodic-f}.}
+    \end{center}
+  \end{book}
+
+  \begin{enumerate}
+  \item Use Theorem \ref{thm:fourier-convergence} to show that
+    \[
+      f(x) = \frac{\pi^2}{3} +
+      4 \sum_{n=1}^\infty \frac{(-1)^n}{n^2} \cos nx, \qquad
+      x \in \RR.
+      \tag{5.9.4}
+      \label{eq:periodic-f-result}
+    \]
+
+    \begin{booktheorem}[5.8.18]
+      Let \(f \colon \RR \to \RR\) be a periodic function with period
+      \(2\pi\).  Suppose that \(f\) and \(f'\) are both piecewise
+      continuous on \([-\pi, \pi]\).  If \(f\) is continuous as \(x\),
+      then the Fourier series \eqref{eq:fourier-series} converges to
+      \(f(x)\).  If \(f\) has a jump discontinuity at \(x\), then the
+      Fourier series \eqref{eq:fourier-series} converges to
+      \(\frac 1 2 (f(x^+) + f(x^-))\).
+      \booklabel{thm:fourier-convergence}{5.8.18}
+
+      \[
+        \frac{a_0}{\sqrt 2} +
+        \sum_{n=1}^\infty (a_n \cos nx + a_{-n} \sin nx).
+        \tag{5.8.16}
+        \label{eq:fourier-series}
+      \]
+    \end{booktheorem}
+
+    \begin{solution}
+
+    \end{solution}
+
+  \item Use \eqref{eq:periodic-f-result} to deduce Euler's 1735
+    discovery that \(\sum_{n=1}^\infty 1/n^2 = \pi^2/6\).
+
+    \begin{solution}
+
+    \end{solution}
+  \end{enumerate}
+
+\item[6.4] Let \(\vec u_1, \vec u_2, \dots, \vec u_n\) be an
+  orthonormal basis of an inner product space \(\mathcal V\) and let
+  \(T \in L(\mathcal V)\).  If \(\norm{T \vec u_i} = 1\) for each
+  \(i = 1, 2, \dots, n\), must \(T\) be an isometry?
+
+  \begin{solution}
+
+  \end{solution}
+
+\item[6.10] How are the plane rotation matrices \(U(\theta)\) and
+  \(U(\phi)\) (see \eqref{eq:rotation-matrix}) related to
+  \(U(\theta+\phi)\)?  Use these three matrices to prove the addition
+  formula
+  \(\cos(\theta+\phi) = \cos\theta \cos\phi - \sin\theta \sin\phi\)
+  and its analog for the sine function.
+  \begin{book}
+    \[
+      U(\theta) =
+      \begin{bmatrix}
+        \cos \theta & -\sin \theta \\
+        \sin \theta &  \cos \theta
+      \end{bmatrix},
+      \qquad
+      \theta \in \RR.
+      \tag{6.2.6}
+      \label{eq:rotation-matrix}
+    \]
+  \end{book}
+
+  \begin{solution}
+
+  \end{solution}
+
+\item[6.12] Let \(\vec a_1, \vec a_2, \dots, \vec a_n\) and
+  \(\vec b_1, \vec b_2, \dots, \vec b_n\) be orthonormal bases of
+  \(\FF^n\).  Describe how to construct a unitary matrix \(U\) such
+  that \(U \vec b_k = \vec a_k\) for each \(k = 1, 2, \dots, n\).
+
+  \begin{solution}
+
+  \end{solution}
+
+\item[6.14] If \(U \in \M_n\) is unitary, show that the matrices
+  \(U^*\), \(U^\transpose\), and \(U\) are unitary.  What is the
+  inverse of \(U\)?
+
+  \begin{solution}
+
+  \end{solution}
+
+\item[6.18] Show that unitary similarity is an equivalence relation on
+  \(M_n\) and real orthogonal similarity is an equivalence relation on
+  \(\M_n (\RR)\).  Is real orthogonal similarity an equivalence
+  relation on \(\M_n (\CC)\)?
+
+  \begin{solution}
+
+  \end{solution}
+
+\item[6.20] If \(U \in \M_n\) is upper triangular and unitary, what
+  can you say about its entries?
+
+  \begin{solution}
+
+  \end{solution}
+\end{description}
+
+
+\end{document}

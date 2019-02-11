@@ -100,7 +100,32 @@
   linkcolor=black,
 }
 
+%% mdframed styles
+\mdfdefinestyle{solution}{
+  skipabove=1em,
+  skipbelow=1em,
+}
+
+\mdfdefinestyle{book}{
+  hidealllines=true,
+  backgroundcolor=lightgray!25,
+  innertopmargin=1em,
+  innerbottommargin=1em,
+  skipabove=1em,
+  skipbelow=1em,
+}
+
 % pset-related environments & commands
+\declaretheoremstyle[
+  name=Theorem,
+  headfont=\bfseries,
+  notefont=\bfseries,
+  bodyfont=\itshape,
+  notebraces={}{},
+  headformat=\NAME\NOTE,
+  mdframed={style=book},
+]{booktheorem}
+
 \declaretheoremstyle[
   spaceabove=1em,
   numbered=no,
@@ -115,19 +140,27 @@
   headfont=\scshape,
 ]{minitheorem}
 
+\declaretheorem[style=booktheorem]{booktheorem}
+
 \declaretheorem[style=theorem]{claim}
+\declaretheorem[style=theorem]{theorem}
 \declaretheorem[style=theorem]{lemma}
 \declaretheorem[style=theorem]{corollary}
 \declaretheorem[style=minitheorem, title=Base case]{basecase}
 \declaretheorem[style=minitheorem, title=Inductive step]{inductivestep}
 
-\newenvironment{solution}{\begin{mdframed}}{\end{mdframed}}
+\newmdenv[style=solution]{solution}
+\newmdenv[style=book]{book}
 
 %% standalone problem environment: obsolete but kept for backwards-compatibility
 \newenvironment{problem}[1][]{\par\hspace{-1in}\makebox[1in]{\hfill#1\quad}\ignorespaces}{}
 
 \newenvironment{preface}{\itshape}{\par\hrulefill}
 \newcommand{\comment}[1]{\marginnote{\scriptsize\textcolor{gray}{#1}}}
+
+\newcommand{\bookfigure}[3]{\booklabel{#1}{#2}\par{\textbf{Figure #2} {#3}}\par}
+
+\newcommand{\booklabel}[2]{\@bsphack \protected@write \@auxout {}{\string \newlabel {#1}{{{{#2}}}{\thepage}{}{}{}}}\@esphack}
 
 % list settings
 
@@ -143,14 +176,12 @@
 %% subproblems
 \setlist[enumerate, 1]{label=(\alph*)}
 
-% mdframed spacing settings
-\mdfsetup{
-  skipabove=.5em,
-}
-
 % tikz settings
 \usetikzlibrary{calc}
+\usetikzlibrary{positioning}
+\usetikzlibrary{backgrounds}
 \usepgfplotslibrary{groupplots}
+\usepgfplotslibrary{fillbetween}
 
 % math commands
 
@@ -169,7 +200,16 @@
 \DeclareMathOperator{\rowspace}{rowspace}
 \DeclareMathOperator{\spn}{span}
 
+\let\Re\relax
+\DeclareMathOperator{\Re}{Re}
+
+\let\Im\relax
+\DeclareMathOperator{\Im}{Im}
+
 \newcommand{\conj}{\overline}
+
+%% special operators and relations
+\newcommand{\defeq}{\stackrel{\mathrm{def}}{=}}
 
 %% common blackboard-bold symbols
 \newcommand{\ZZ}{\mathbb Z}
@@ -186,6 +226,7 @@
 
 % transpose and complement
 \newcommand{\T}{\mathsf{T}}
+\newcommand{\transpose}{\intercal}
 \newcommand{\M}{\mathsf{M}}
 \renewcommand{\complement}{\C}
 
@@ -222,4 +263,4 @@
 \newcommand{\Set}{\Curly}
 \newcommand{\Setst}[2]{\Set{{#1} \; : \; {#2}}}
 
-\newcommand{\eval}[1]{\bigg\rvert_{#1}}
+\newcommand{\eval}{\bigg\rvert}

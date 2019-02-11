@@ -7,10 +7,9 @@
 
 \begin{document}
 \begin{description}
-\item[P.3.17]
-  Let \(A \in \M_{m\times n}\).  Use the preceding problems to show
-  that \(\rank A = r\) if and only if there are invertible
-  \(B \in \M_m\) and \(C \in M_n\) such that
+\item[P.3.17] Let \(A \in \M_{m\times n}\).  Use the preceding
+  problems to show that \(\rank A = r\) if and only if there are
+  invertible \(B \in \M_m\) and \(C \in \M_n\) such that
   \[
     A = B
     \begin{bmatrix}
@@ -24,11 +23,11 @@
 
   \end{solution}
 
-\item[P.4.3]
-  Provide details for the following alternative proof of the
-  Cauchy--Schwarz inequality in a real inner product space \(V\).  For
-  nonzero vectors \(\vec u, \vec v \in V\), consider the function
+\item[P.4.3] Provide details for the following alternative proof of
+  the Cauchy--Schwarz inequality in a real inner product space \(V\).
+  For nonzero vectors \(\vec u, \vec v \in V\), consider the function
   \(p(t) = \norm{t \vec u + \vec v}^2\) of a real variable \(t\).
+  \booklabel{problem:real-cauchy-schwarz}{P.4.3}
   \begin{enumerate}
   \item Why is \(p(t) \ge 0\) for all real \(t\)?
 
@@ -37,7 +36,7 @@
     \end{solution}
 
   \item If \(p(t) = 0\) has a real root, why are \(\vec u\) and
-    \(\vec v\) linearly dependent?
+    \(\vec v\) linearly dependent?  \label{part:root-dependent}
 
     \begin{solution}
 
@@ -122,8 +121,8 @@
 \item[P.4.11]
   \begin{enumerate}
   \item Let \(f, g \in C_\RR [0, 1]\) (see Example 4.4.8) be the
-    functions depicted in Figure 4.9.  Does there exist a
-    \(c \in \RR\) such that \(\norm{f + cg} < \norm f\)?
+    functions depicted in Figure \ref{fig:graphs-f-z-g-x}.  Does there
+    exist a \(c \in \RR\) such that \(\norm{f + cg} < \norm f\)?
 
     \begin{solution}
 
@@ -152,10 +151,10 @@
         font=\small,
       },
     }
-    \hfil
+
     \begin{tikzpicture}
       \begin{axis}[depicted function]
-        \addplot[domain=0:1, samples=256] {
+        \addplot[domain=0:1, samples=385] {
           exp(-((x-.5) / .25)^2) *
           (20 - 2.5 * cos(360*24*x))
         };
@@ -175,7 +174,9 @@
 
       \end{axis}
     \end{tikzpicture}
-    \hfil
+
+    \bookfigure{fig:graphs-f-z-g-x}{4.9}
+    {Graphs of \(f(z)\) (left) and \(g(x)\) (right).}
   \end{center}
 
 \item[P.4.23]
@@ -229,13 +230,21 @@
     \(\vec w \in \WW\).  Why is
     \(\vec x = \sum_{i=1}^n \inner{\vec v, \vec u_i} \vec u_i\)?  This
     vector \(\vec x\) is the orthogonal projection of \(\vec v\) onto
-    the subspace \(\WW\); see Section 7.3.
+    the subspace \(\WW\); see Section
+    7.3.  \label{part:unique-parallel}
 
     \begin{solution}
 
     \end{solution}
 
-  \item Deduce Bessel's inequality (5.7.5) from (5.9.1).
+  \item Deduce Bessel's inequality \eqref{eq:bessel-inequality} from
+    \eqref{eq:parallel-perp-decomp}.
+    \[
+      \sum_{i=1}^n \abs{\inner{\vec v, \vec u_i}}^2 \le
+      \norm{\vec v}^2.
+      \tag{5.7.5}
+      \label{eq:bessel-inequality}
+    \]
 
     \begin{solution}
 
@@ -249,7 +258,7 @@
   \(\vec v \in \VV\).  Provide details for the following approach to
   Bessel's inequality (5.7.5):
   \begin{enumerate}
-  \item If \(\vec v \in U\), why is
+  \item If \(\vec v \in \UU\), why is
     \(\norm{\vec v}^2 = \sum_{i=1}^n \abs{\inner{\vec v, \vec
         u_i}}^2\)?
 
