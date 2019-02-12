@@ -206,6 +206,8 @@
 \let\Im\relax
 \DeclareMathOperator{\Im}{Im}
 
+\newcommand{\Vspace}{\mathcal{V}}
+
 \newcommand{\conj}{\overline}
 
 %% special operators and relations
