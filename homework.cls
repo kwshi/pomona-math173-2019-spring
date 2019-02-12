@@ -228,7 +228,7 @@
 \newcommand{\T}{\mathsf{T}}
 \newcommand{\transpose}{\intercal}
 \newcommand{\M}{\mathsf{M}}
-\renewcommand{\complement}{\C}
+\renewcommand{\complement}{\mathsf{C}}
 
 %% differential operators
 \newcommand{\odif}{\mathop{}\! \mathrm d}
