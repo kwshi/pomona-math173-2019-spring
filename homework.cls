@@ -25,7 +25,11 @@
   amssymb,
   amsfonts,
 }
+\RequirePackage{dsfont}
+\RequirePackage{mathrsfs}
 \RequirePackage{mathtools, thmtools}
+
+\renewcommand{\mathbb}{\mathds}
 
 %% utility packages
 \RequirePackage{mdframed}
@@ -198,7 +202,9 @@
 \DeclareMathOperator{\rows}{rows}
 \DeclareMathOperator{\colspace}{colspace}
 \DeclareMathOperator{\rowspace}{rowspace}
+\DeclareMathOperator{\nullspace}{null}
 \DeclareMathOperator{\spn}{span}
+\DeclareMathOperator{\diag}{diag}
 
 \let\Re\relax
 \DeclareMathOperator{\Re}{Re}
