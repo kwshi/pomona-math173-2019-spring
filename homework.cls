@@ -42,7 +42,6 @@
 \RequirePackage{hyperref}
 \RequirePackage{marginnote}
 \RequirePackage{isomath}
-\RequirePackage{nicematrix}
 \RequirePackage{centernot}
 \RequirePackage{caption}
 \RequirePackage{subcaption}
