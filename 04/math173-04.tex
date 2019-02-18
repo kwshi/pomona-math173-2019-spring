@@ -128,6 +128,68 @@
     orthogonal projections found in
     \ref{part:which-orthogonal-projections}.
 
+    \begin{bookexample}[7.3.5]
+      Suppose that \(\vec u_1, \vec u_2, \dots, \vec u_r\) is an
+      orthonormal basis for a subspace \(\Uspace\) of \(\FF^n\) and
+      let \(\Uspace =
+      \begin{bmatrix}
+        \vec u_1 & \vec u_2 & \dots \vec u_r
+      \end{bmatrix}
+      \in \M_{n \times r}\).  For any \(\vec v \in \FF^n\),
+      \begin{align*}
+        \begin{split}
+          P_\Uspace \vec v
+          &= \sum_{i=1}^r \inner{\vec v, \vec u_i} \vec u_i
+          = \sum_{i=1}^r \vec u_i (\vec u_i^* \vec v)
+          = \sum_{i=1}^r (\vec u_i \vec u_i^*) \vec v \\
+          &= \Paren{\sum_{i=1}^r \vec u_i \vec u_i^*} \vec v
+          = U U^* \vec v,
+        \end{split}
+        \tag{7.3.6}
+      \end{align*}
+      in which we invoke (3.1.19) for the final equality.  For
+      example, if \(A \in \M_{m \times n} (\FF)\) has full column rank
+      and \(A = QR\) is a \(QR\) factorization, then
+      \(\col A = \col Q\) (Corollary 6.5.15).  Therefore,
+      \[
+        P_{\col A} = Q Q^*
+        \tag{7.3.7}
+      \]
+      is the orthogonal projection onto the column space of \(A\).
+    \end{bookexample}
+
+    \begin{book}
+      \[
+        AB =
+        \begin{bmatrix}
+          \vec a_1 & \vec a_2 & \dots & \vec a_r
+        \end{bmatrix}
+        \begin{bmatrix}
+          \vec b_1^\transpose \\ \dots \\ \vec b_r^\transpose
+        \end{bmatrix}
+        = \vec a_1 \vec b_1^\transpose
+        + \vec a_2 \vec b_2^\transpose
+        + \dots
+        + \vec a_r \vec b_r^\transpose
+        \tag{3.1.19}
+      \]
+    \end{book}
+
+    \begin{bookcorollary}[6.5.15]
+      Let \(A \in \M_{m \times n} (\FF)\).  Suppsoe that \(m \ge n\)
+      and \(\rank A = n\).  Let \(A = QR\), in which
+      \(Q \in \M_{m \times n} (\FF)\) has orthonormal columns and
+      \(R \in \M_n (\FF)\) is upper triangular and has positive
+      diagonal entries.  For each \(k = 1, 2, \dots, n\), let \(A_k\)
+      and \(Q_k\) denote the submatrices of \(A\) and \(Q\),
+      respectively, comprising their first \(k\) columns.  Then
+      \[
+        \col A_k = \col Q_k, \quad k = 1, 2, \dots, n,
+      \]
+      that is, the columns of each submatrix \(Q_k\) are an
+      orthonormal basis for \(\col A_k\).
+    \end{bookcorollary}
+
     \begin{solution}
 
     \end{solution}

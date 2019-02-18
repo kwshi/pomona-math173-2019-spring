@@ -120,14 +120,13 @@
 
 % pset-related environments & commands
 \declaretheoremstyle[
-  name=Theorem,
   headfont=\bfseries,
   notefont=\bfseries,
   bodyfont=\itshape,
   notebraces={}{},
   headformat=\NAME\NOTE,
   mdframed={style=book},
-]{booktheorem}
+]{book}
 
 \declaretheoremstyle[
   spaceabove=1em,
@@ -143,7 +142,9 @@
   headfont=\scshape,
 ]{minitheorem}
 
-\declaretheorem[style=booktheorem]{booktheorem}
+\declaretheorem[style=book, name=Theorem]{booktheorem}
+\declaretheorem[style=book, name=Example]{bookexample}
+\declaretheorem[style=book, name=Corollary]{bookcorollary}
 
 \declaretheorem[style=theorem]{claim}
 \declaretheorem[style=theorem]{theorem}
@@ -212,6 +213,8 @@
 \DeclareMathOperator{\Im}{Im}
 
 \newcommand{\Vspace}{\mathcal{V}}
+\newcommand{\Uspace}{\mathcal{U}}
+\newcommand{\Wspace}{\mathcal{W}}
 
 \newcommand{\conj}{\overline}
 
