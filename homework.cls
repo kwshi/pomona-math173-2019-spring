@@ -130,7 +130,7 @@
 
 \declaretheoremstyle[
   spaceabove=1em,
-  numbered=no,
+  numbered=yes,
   bodyfont=\normalfont,
   headfont=\bfseries,
 ]{theorem}
