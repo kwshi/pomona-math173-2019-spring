@@ -178,12 +178,14 @@
 
 
 %% for problem statements
-\setlist[description, 1]{
+\newlist{problems}{description}{2}
+
+\setlist[problems, 1]{
+  leftmargin=0in,
   labelwidth=1in,
   align=right,
-  leftmargin=0pt,
   labelsep=1em,
-  labelindent=!
+  labelindent=!,
 }
 
 %% subproblems
