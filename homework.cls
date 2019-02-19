@@ -167,6 +167,15 @@
 \newcommand{\booklabel}[2]{\@bsphack \protected@write \@auxout {}{\string \newlabel {#1}{{{{#2}}}{\thepage}{}{}{}}}\@esphack}
 
 % list settings
+%% iff proof
+\newcommand*{\iffenum}[1]{\expandafter\@iffenum\csname c@#1\endcsname}
+\newcommand*{\@iffenum}[1]
+{\ifcase#1\or{\(\implies\)}\or{\(\impliedby\)}\else\@ctrerr\fi}
+
+\AddEnumerateCounter{\iffenum}{\@iffenum}{\(\Rightarrow\)}
+\newlist{iffproof}{enumerate}{1}
+\setlist[iffproof]{label=\iffenum*, leftmargin=3em}
+
 
 %% for problem statements
 \setlist[description, 1]{
