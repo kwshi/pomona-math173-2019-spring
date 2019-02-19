@@ -216,7 +216,11 @@
 \DeclareMathOperator{\rowspace}{rowspace}
 \DeclareMathOperator{\nullspace}{null}
 \DeclareMathOperator{\spn}{span}
+\DeclareMathOperator{\lspan}{span}
 \DeclareMathOperator{\diag}{diag}
+\DeclareMathOperator{\tr}{tr}
+\DeclareMathOperator{\trace}{tr}
+\DeclareMathOperator{\ran}{ran}
 
 \let\Re\relax
 \DeclareMathOperator{\Re}{Re}
