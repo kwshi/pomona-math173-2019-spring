@@ -188,6 +188,7 @@
 
 %% subproblems
 \setlist[enumerate, 1]{label=(\alph*)}
+\setlist[enumerate, 2]{label=(\roman*)}
 
 % tikz settings
 \usetikzlibrary{calc}
