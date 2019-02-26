@@ -112,17 +112,17 @@
 \mdfdefinestyle{book}{
   hidealllines=true,
   backgroundcolor=lightgray!25,
-  innertopmargin=1em,
-  innerbottommargin=1em,
-  skipabove=1em,
-  skipbelow=1em,
+  innertopmargin=.5em,
+  innerbottommargin=.5em,
+  skipabove=.5em,
+  skipbelow=.5em,
 }
 
 % pset-related environments & commands
 \declaretheoremstyle[
   headfont=\bfseries,
   notefont=\bfseries,
-  bodyfont=\itshape,
+  bodyfont=\normalfont,
   notebraces={}{},
   headformat=\NAME\NOTE,
   mdframed={style=book},
@@ -215,8 +215,8 @@
 \DeclareMathOperator{\colspace}{colspace}
 \DeclareMathOperator{\rowspace}{rowspace}
 \DeclareMathOperator{\nullspace}{null}
-\DeclareMathOperator{\spn}{span}
-\DeclareMathOperator{\lspan}{span}
+\DeclareMathOperator*{\spn}{span}
+\DeclareMathOperator*{\lspan}{span}
 \DeclareMathOperator{\diag}{diag}
 \DeclareMathOperator{\tr}{tr}
 \DeclareMathOperator{\trace}{tr}
