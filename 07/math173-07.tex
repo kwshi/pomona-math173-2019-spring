@@ -1,0 +1,186 @@
+\documentclass{../homework}
+
+\homework{7}
+\date{Tuesday 3/12}
+
+\author{}
+\coauthor{}
+
+\begin{document}
+\begin{problems}
+\item[P.8.8] Let \(n \ge 2\), let \(c \in C\), and consider
+  \(A_c \in \M_n\), whose off-diagonal entries are all \(1\), and
+  whose diagonal entries are \(c\).  Sketch the Ger\v sgorin region
+  \(G(A_c)\).  Why is \(A_c\) invertible if \(\abs c > n - 1\)?  Show
+  that \(A_{1-n}\) is not invertible.
+
+  \begin{solution}
+
+  \end{solution}
+
+\item[P.8.9*] Let \(E = \vec e \vec e^\transpose \in \M_n\).
+  \begin{enumerate}
+  \item Why is \((n, \vec e)\) an eigenpair of \(E\)?
+
+    \begin{solution}
+
+    \end{solution}
+
+  \item If \(\vec v\) is nonzero and orthogonal to \(\vec e\), why is
+    \((0, \vec v)\) an eigenpair of \(E\)?
+
+    \begin{solution}
+
+    \end{solution}
+
+  \item Let \(p(z) = z^2 - nz\) and show that \(p(E) = 0\).
+
+    \begin{solution}
+
+    \end{solution}
+
+  \item Use Theorem 8.3.3 to explain why \(0\) and \(n\) are the only
+    eigenvalues of \(E\).  What are their respective geometric
+    multiplicities?
+    \begin{booktheorem}[8.3.3]
+      Let \(A \in \M_n\) and let \(p\) be a polynomial that
+      annihilates \(A\).
+      \begin{enumerate}
+      \item Every eigenvalue of \(A\) is a root of \(p(z) = 0\).
+      \item \(A\) has finitely many different eigenvalues.
+      \end{enumerate}
+    \end{booktheorem}
+
+    \begin{solution}
+
+    \end{solution}
+  \end{enumerate}
+
+\item[P.8.10] Consider \(A =
+  \begin{bmatrix}
+    a_{ij}
+  \end{bmatrix}
+  \in \M_n\), in which \(a_{ii} = a\) for each \(i = 1, 2, \dots, n\)
+  and \(a_{ij} = b\) if \(i \ne j\).  Find the eigenvalues of \(A\) if
+  their geometric multiplicities.  \textit{Hint}: Use the preceding
+  problem.
+
+  \begin{solution}
+
+  \end{solution}
+
+\item[P.8.15] Let \(A \in \M_n\), \(B \in \M_m\), and
+  \(C = A \oplus B \in \M_{n+m}\).  Use eigenpairs to show the
+  following:
+  \begin{enumerate}
+  \item If \(\lambda\) is an eigenvalue of \(A\), then it is an
+    eigenvalue of \(C\).
+
+    \begin{solution}
+      \begin{proof}
+
+      \end{proof}
+    \end{solution}
+
+  \item If \(\lambda\) is an eigenvalue of \(B\), then it is an
+    eigenvalue of \(C\).
+
+    \begin{solution}
+      \begin{proof}
+
+      \end{proof}
+    \end{solution}
+
+  \item If \(\lambda\) is an eigenvalue of \(C\), then it is an
+    eigenvalue of either \(A\) or \(B\).
+
+    \begin{solution}
+      \begin{proof}
+
+      \end{proof}
+    \end{solution}
+  \end{enumerate}
+
+\item[P.8.27] The \textit{Volterra operator} is the linear operator
+  \(T \colon C[0, 1] \to C[0, 1]\) defined by
+  \((Tf)(t) = \int_0^t f(s) \dif s\).  The pair \((\lambda, f)\) is an
+  \emph{eigenpair} of \(T\) if \(\lambda \in C\), \(f \in C[0, 1]\) is
+  not the zero function, and \((Tf)(t) = \lambda f(t)\) for all
+  \(t \in [0, 1]\).
+  \begin{enumerate}
+  \item Show that \(0\) is not an eigenvalue of \(T\).
+
+    \begin{solution}
+      \begin{proof}
+
+      \end{proof}
+    \end{solution}
+
+  \item Find the eigenpairs of the Volterra operator.  Compare your
+    results with the situation for eigenvalues of a matrix.
+    \textit{Hint}: Consider the equation \(Tf = \lambda f\) and use
+    the fundamental theorem of calculus.
+
+    \begin{solution}
+
+    \end{solution}
+  \end{enumerate}
+
+\item[P.8.28] Suppose that \((\lambda, \vec x)\) and \((\mu, \vec y)\)
+  are eigenpairs of \(A \in \M_n\) and \(B \in M_m\), respectively.
+  Show that \((\lambda \mu, \vec x \otimes \vec y)\) is an eigenpair
+  of \(A \otimes B \in \M_{nm}\) and
+  \((\lambda+\mu, \vec x \otimes \vec y)\) is an eigenpair of
+  \(\Paren{A \otimes I_m} + \Paren{I_n \otimes B} \in \M_{nm}\).
+
+  \begin{solution}
+    \begin{proof}
+
+    \end{proof}
+  \end{solution}
+
+\item[P.9.3] Let \(A, B \in \M_n\).
+  \begin{enumerate}
+  \item If \(\spec A = \spec B\), do \(A\) and \(B\) have the same
+    characteristic polynomials?  Why?
+
+    \begin{solution}
+
+    \end{solution}
+
+  \item If \(A\) and \(B\) have the same characteristic polynomials,
+    is \(\spec A = \spec B\)?  Why?
+
+    \begin{solution}
+
+    \end{solution}
+  \end{enumerate}
+
+\item[P.9.6] Suppose tht \(A \in \M_n\) is diagonalizable.
+  \begin{enumerate}
+  \item Show that \(\rank A\) is equal to the number of its nonzero
+    eigenvalues (including multiplicities).
+
+    \begin{solution}
+      \begin{proof}
+
+      \end{proof}
+    \end{solution}
+
+  \item Consider the matrix
+    \[
+      B =
+      \begin{bmatrix}
+        0 & 1 \\
+        0 & 0
+      \end{bmatrix}.
+    \]
+    What is its rank?  How many nonzero eigenvalues does it have?  Is
+    it diagonalizable?
+
+    \begin{solution}
+
+    \end{solution}
+  \end{enumerate}
+\end{problems}
+\end{document}
