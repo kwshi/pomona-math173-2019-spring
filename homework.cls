@@ -244,6 +244,7 @@
 \DeclareMathOperator{\tr}{tr}
 \DeclareMathOperator{\trace}{tr}
 \DeclareMathOperator{\ran}{ran}
+\DeclareMathOperator{\spec}{spec}
 
 \let\Re\relax
 \DeclareMathOperator{\Re}{Re}
