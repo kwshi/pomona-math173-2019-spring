@@ -118,6 +118,18 @@
   skipbelow=.5em,
 }
 
+\mdfdefinestyle{quote}{
+  hidealllines=true,
+  leftline=true,
+  linecolor=lightgray!50,
+  linewidth=.25em,
+  innerrightmargin=0pt,
+  rightmargin=0pt,
+  skipabove=.5em,
+  skipbelow=.5em,
+}
+
+
 % pset-related environments & commands
 \declaretheoremstyle[
   headfont=\bfseries,
@@ -155,6 +167,7 @@
 
 \newmdenv[style=solution]{solution}
 \newmdenv[style=book]{book}
+\renewmdenv[style=quote]{quote}
 
 %% standalone problem environment: obsolete but kept for backwards-compatibility
 \newenvironment{problem}[1][]{\par\hspace{-1in}\makebox[1in]{\hfill#1\quad}\ignorespaces}{}
@@ -175,6 +188,15 @@
 \AddEnumerateCounter{\iffenum}{\@iffenum}{\(\Rightarrow\)}
 \newlist{iffproof}{enumerate}{1}
 \setlist[iffproof]{label=\iffenum*, leftmargin=3em}
+
+\newcommand*{\subsetenum}[1]{\expandafter\@subsetenum\csname c@#1\endcsname}
+\newcommand*{\@subsetenum}[1]
+{\ifcase#1\or{\(\subset\)}\or{\(\supset\)}\else\@ctrerr\fi}
+
+\AddEnumerateCounter{\subsetenum}{\@subsetenum}{\(\subset\)}
+
+\newlist{seteqproof}{enumerate}{1}
+\setlist[seteqproof]{label=\subsetenum*}
 
 
 %% for problem statements
