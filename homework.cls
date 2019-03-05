@@ -105,8 +105,8 @@
 
 %% mdframed styles
 \mdfdefinestyle{solution}{
-  skipabove=1em,
-  skipbelow=1em,
+  skipabove=.5em,
+  skipbelow=.5em,
 }
 
 \mdfdefinestyle{book}{
