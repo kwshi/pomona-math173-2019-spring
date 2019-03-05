@@ -138,6 +138,7 @@
   notebraces={}{},
   headformat=\NAME\NOTE,
   mdframed={style=book},
+  postheadhook={\setlist[enumerate, 2]{label=(\alph*)}},
 ]{book}
 
 \declaretheoremstyle[
