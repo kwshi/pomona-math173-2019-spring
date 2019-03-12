@@ -1,0 +1,229 @@
+\documentclass{../homework}
+
+\homework 8
+\date{Thursday 3/28}
+
+\author{}
+\coauthor{}
+
+\begin{document}
+\begin{problems}
+\item[P.9.15] Let \(A, B \in \M_n\) and suppose that either \(A\) or
+  \(B\) is invertible.  Show that \(AB\) is similar to \(BA\), and
+  conclude that these two products have the [same] eigenvalues.
+
+  \begin{solution}
+    \begin{proof}
+
+    \end{proof}
+  \end{solution}
+
+\item[P.9.16]
+  \begin{enumerate}
+  \item Consider the \(2\times2\) matrices \(A =
+    \begin{bmatrix}
+      0 & 1 \\ 0 & 0
+    \end{bmatrix}
+    \) and \(B =
+    \begin{bmatrix}
+      0 & 0 \\ 1 & 0
+    \end{bmatrix}
+    \).  Is \(AB\) similar to \(BA\)?  Do these two products have the
+    same eigenvalues?
+
+    \begin{solution}
+
+    \end{solution}
+
+  \item Answer the same questions for
+    \(A = \begin{bmatrix} 0 & 1 \\ 0 & 0 \end{bmatrix}\) and
+    \(B = \begin{bmatrix} 1 & 0 \\ 0 & 0 \end{bmatrix}\).
+
+    \begin{solution}
+
+    \end{solution}
+  \end{enumerate}
+\item[P.9.18] Use the vectors \(\vec e\) and \(\vec r\) in Example
+  9.7.9.
+  \begin{bookexample}[9.7.9]
+    Let \(A\) be the matrix (9.7.8) and observe that
+    \[
+      A + A^\transpose = \begin{bmatrix} i+j \end{bmatrix}
+      =
+      \begin{bmatrix}
+        2 & 3 & 4 & \cdots & n+1 \\
+        3 & 4 & 5 & \cdots & n+2 \\
+        4 & 5 & 6 & \cdots & n+3 \\
+        \vdots & \vdots & \vdots & \ddots & \vdots \\
+        n+1 & n+2 & n+3 & \cdots & 2n
+      \end{bmatrix}.
+      \tag{9.7.10}
+    \]
+    Now use the presentation of a matrix product in (3.1.19) to wrie
+    \[
+      A + A^\transpose = \vec r \vec e^\transpose
+      + \vec e \vec r^\transpose = XY^\transpose,
+    \]
+    in which
+    \(X = \begin{bmatrix} \vec r & \vec e \end{bmatrix} \in \M_{n
+      \times 2}\) and
+    \(Y = \begin{bmatrix} \vec e & \vec r \end{bmatrix} \in \M_{n
+      \times 2}\).  Theorem 9.7.2 tells us that the \(n\) eigenvalues
+    of \(XY^\transpose\) are the two eigenvalues of
+    \[
+      Y^\transpose X =
+      \begin{bmatrix}
+        \vec e^\transpose \vec r & \vec e^\transpose \vec e \\
+        \vec r^\transpose \vec r & \vec r^\transpose \vec e \\
+      \end{bmatrix}
+      \tag{9.7.11}
+    \]
+    together with \(n-2\) zeros; see P.9.17.
+  \end{bookexample}
+
+  \begin{book}
+    \[
+      A = \vec r \vec e^\transpose
+      \begin{bmatrix}
+        1 & 1 & \cdots & 1 \\
+        2 & 2 & \cdots & 2 \\
+        \vdots & \vdots & \ddots & \vdots
+        n & n & \cdots & n \\
+      \end{bmatrix}
+      \tag{9.7.8}
+    \]
+  \end{book}
+
+  \begin{booktheorem}[9.7.2]
+    Suppose that \(A \in \M_{m \times n}\), \(B \in \M_{n \times m}\),
+    and \(n \ge m\).
+    \begin{enumerate}
+    \item The nonzero eigenvalues of \(AB \in \M_m\) and
+      \(BA \in M_n\) are the same, with the same algebraic
+      multiplicities.
+    \item If \(0\) is an eigenvalue of \(AB\) with algebraic
+      multiplicity \(k \ge 0\), then \(0\) is an eigenvalue of \(BA\)
+      with algebraic multiplicity \(k+n-m\).
+    \item If \(m=n\), then the eigenvalues of \(AB\) and \(BA\) are
+      the same, with the same algebraic multiplicities.
+    \end{enumerate}
+  \end{booktheorem}
+
+  \begin{enumerate}
+  \item Verify that
+    \[
+      A = \begin{bmatrix} i-j \end{bmatrix} =
+      \begin{bmatrix}
+        0 & -1 & -2 & \cdots & -n+1 \\
+        1 & 0 & -1 & \cdots & -n+2 \\
+        2 & 1 & 0 & \cdots & -n+3 \\
+        \vdots & \vdots & \vdots & \ddots & \vdots \\
+        n-1 & n-2 & n-3 & \cdots & 0
+      \end{bmatrix}
+      = \vec r \vec e^\transpose - \vec e \vec r^\transpose
+      = ZY^\transpose,
+    \]
+    in which \(Y = \begin{bmatrix} \vec e & \vec r \end{bmatrix}\) and
+    \(Z = \begin{bmatrix} \vec r & -\vec e \end{bmatrix}\).
+
+    \begin{solution}
+
+    \end{solution}
+
+  \item Show that the eigenvalues of \(A\) are the two eigenvalues of
+    \[
+      Y^\transpose Z =
+      \begin{bmatrix}
+        \vec e^\transpose \vec r & - \vec e^\transpose \vec e \\
+        \vec r^\transpose \vec r & - \vec r^\transpose \vec e \\
+      \end{bmatrix}
+      =
+      \begin{bmatrix}
+        \frac 1 2 n(n+1) & -n \\
+        \frac 1 6 n(n+1)(2n+1) & -\frac 1 2 n(n+1)
+      \end{bmatrix},
+    \]
+    together with \(n-2\) zeros.
+
+    \begin{solution}
+      \begin{proof}
+
+      \end{proof}
+    \end{solution}
+
+  \item Show that the discriminant of \(Y^\transpose Z\) is negative
+    (see P.9.8) and explain what this implies about the eigenvalues.
+
+    \begin{solution}
+      \begin{proof}
+
+      \end{proof}
+    \end{solution}
+
+  \item Show that the eigenvalues of \(Y^\transpose Z\) are
+    \[
+      \pm i \frac n 2 \sqrt{\frac{n^2-1}{3}}.
+    \]
+
+    \begin{solution}
+      \begin{proof}
+
+      \end{proof}
+    \end{solution}
+  \end{enumerate}
+
+\item[P.9.25] If \(A \in \M_n(\RR)\) and \(n\) is odd, show that \(A\)
+  has at least one real eigenvalue.
+
+  \begin{solution}
+    \begin{proof}
+
+    \end{proof}
+  \end{solution}
+
+\item[P.10.2] Let \(A \in \M_n\).  Prove in two ways that \(A\) is
+  nilpotent if and only if \(\spec A = \set 0\).
+
+  \begin{solution}
+    \begin{proof}
+
+    \end{proof}
+    \begin{proof}
+
+    \end{proof}
+  \end{solution}
+
+\item[P.10.3] Let \(A \in \M_n\).  Show that the following statements
+  are equivalent:
+  \begin{enumerate}
+  \item \(A\) is nilpotent.
+  \item \(A\) is unitarily similar to a strictly upper triangular
+    matrix.
+  \item \(A\) is similar to a strictly upper triangular matrix.
+  \end{enumerate}
+
+  \begin{solution}
+    \begin{proof}
+
+    \end{proof}
+  \end{solution}
+
+\item[P.10.4] Suppose that an upper triangular matrix \(T \in \M_n\)
+  has \(\nu\) nonzero diagonal entries.  Show that \(\rank T \ge \nu\)
+  and give an example for which \(\rank T > \nu\).
+
+  \begin{solution}
+    \begin{proof}
+
+    \end{proof}
+  \end{solution}
+
+\item[P.10.5] Suppose that \(A \in \M_n\) has \(\nu\) nonzero
+  eigenvalues.  Explain why \(\rank A \ge \nu\) and give an example
+  for which \(\rank A > \nu\).
+
+  \begin{solution}
+
+  \end{solution}
+\end{problems}
+\end{document}
