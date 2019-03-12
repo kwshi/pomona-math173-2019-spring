@@ -115,7 +115,7 @@
   backgroundcolor=lightgray!25,
   innertopmargin=.5em,
   innerbottommargin=.5em,
-  skipabove=.5em,
+  skipabove=1em,
   skipbelow=.5em,
 }
 
@@ -138,7 +138,9 @@
   bodyfont=\normalfont,
   notebraces={}{},
   headformat=\NAME\NOTE,
-  mdframed={style=book},
+  mdframed={style=book, skipabove=.5em},
+  spaceabove=0em,
+  spacebelow=0em,
   postheadhook={\setlist[enumerate, 2]{label=(\alph*)}},
 ]{book}
 
