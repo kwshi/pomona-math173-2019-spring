@@ -34,6 +34,7 @@
 %% utility packages
 \RequirePackage{mdframed}
 \RequirePackage{cancel}
+\RequirePackage{stackrel}
 \RequirePackage{lastpage}
 \RequirePackage{multicol}
 \RequirePackage{color}
