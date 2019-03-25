@@ -145,14 +145,14 @@
 ]{book}
 
 \declaretheoremstyle[
-  spaceabove=1em,
+  spaceabove=0em,
   numbered=yes,
   bodyfont=\normalfont,
   headfont=\bfseries,
 ]{theorem}
 
 \declaretheoremstyle[
-  spaceabove=1em,
+  spaceabove=0em,
   numbered=no,
   bodyfont=\normalfont,
   headfont=\scshape,
