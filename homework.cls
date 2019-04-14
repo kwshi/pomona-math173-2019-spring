@@ -27,6 +27,7 @@
 }
 \RequirePackage{dsfont}
 \RequirePackage{mathrsfs}
+\RequirePackage{wasysym}
 \RequirePackage{mathtools, thmtools}
 
 \renewcommand{\mathbb}{\mathds}
