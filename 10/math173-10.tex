@@ -1,0 +1,167 @@
+\documentclass{../homework}
+
+\homework{10}
+\date{Tuesday 4/16}
+
+\author{}
+\coauthor{}
+
+\begin{document}
+\begin{problems}
+\item[P.11.6] Let \(A \in \M_n\) be nilpotent.
+  \begin{enumerate}
+  \item Show that
+    \[
+      (I-A)^{-1} = I + A + A^2 + \dots + A^{n-1}.
+    \]
+
+    \begin{solution}
+      \begin{proof}
+
+      \end{proof}
+    \end{solution}
+
+  \item Compute \((I-AB)^{-1}\), in which \(AB\) is the product in
+    Example 11.9.6.
+
+    \begin{bookexample}
+      Consider
+      \[
+        A =
+        \begin{bmatrix}
+          0&0&0&0 \\ 0&0&1&0 \\ 0&0&0&1 \\ 0&1&0&0
+        \end{bmatrix}
+        \qquad\text{and}\qquad
+        B =
+        \begin{bmatrix}
+          0&0&0&1 \\ 0&1&0&0 \\ 0&0&0&0 \\ 1&0&0&0
+        \end{bmatrix},
+      \]
+      whose products are the nilpotent matrices
+      \[
+        AB =
+        \begin{bmatrix}
+          0&0&0&0 \\ 0&0&0&0 \\ 1&0&0&0 \\ 0&1&0&0
+        \end{bmatrix}
+        \qquad\text{and}\qquad
+        BA =
+        \begin{bmatrix}
+          0&1&0&0 \\ 0&0&1&0 \\ 0&0&0&0 \\ 0&0&0&0
+        \end{bmatrix}
+        = J_3 \oplus J_1.
+      \]
+    \end{bookexample}
+
+    \begin{solution}
+
+    \end{solution}
+  \end{enumerate}
+
+\item[P.11.9] Let \(A \in \M_4\) and let \(r_k = \rank A^k\) for
+  \(k = 0, 1, 2, 3, 4\).  Show that
+  \(r_0 = 4, r_1 = 2, r_2 = 1, r_3 = 0\) is possible, but
+  \(r_0 = 4, r_1 = 3, r_2 = 0\) is not possible.
+
+  \begin{solution}
+    \begin{proof}
+
+    \end{proof}
+  \end{solution}
+
+\item[P.11.10] Suppose that \(A \in \M_n\) and
+  \(\lambda \in \spec A\).  Show that the multiplicity of the block
+  \(J_k(\lambda)\) in the Jordan form of \(A\) is
+  \[
+    \rank(A-\lambda I)^{k-1}
+    - 2 \rank(A-\lambda I)^k
+    + \rank(A-\lambda I)^{k_1}.
+  \]
+
+  \begin{solution}
+    \begin{proof}
+
+    \end{proof}
+  \end{solution}
+
+\item[P.11.11] Let \(A \in \M_n\) be nilpotent.  What are the possible
+  Weyr characteristics and Jordan canonical forms for \(A\) if
+  \begin{enumerate}
+  \item \(n=2\)?
+
+    \begin{solution}
+
+    \end{solution}
+
+  \item \(n=3\)?
+
+    \begin{solution}
+
+    \end{solution}
+
+  \item \(n=4\)?
+
+    \begin{solution}
+
+    \end{solution}
+
+  \item \(n=5\)?
+
+    \begin{solution}
+
+    \end{solution}
+  \end{enumerate}
+
+\item[P.11.12] Give examples of matrices \(A, B \in \M_n\) that are
+  not similar, but that have the same characteristic polynomials and
+  the same minimal polynomials.  Why must your examples have size
+  greater than 3?
+
+  \begin{solution}
+
+  \end{solution}
+
+\item[P.11.15] Let \(\varepsilon \ge 0\) and construct
+  \(A_\varepsilon \in \M_n\) setting the \((n, 1)\) entry of the
+  nilpotent Jordan block \(J_n(0)\) equal to \(\varepsilon\).
+  \begin{enumerate}
+  \item Show that \(p_{A_\varepsilon} (z) = z^n - \varepsilon\).
+
+    \begin{solution}
+      \begin{proof}
+
+      \end{proof}
+    \end{solution}
+
+  \item If \(\varepsilon > 0\), show that \(A\) is diagonalizable and
+    the modulus of every eigenvalue is \(\varepsilon^{1/n}\).  If
+    \(n=64\) and \(\varepsilon = 2^{-32}\), then every eigenvalue of
+    \(A_\varepsilon\) has modulus \(2^{-1/2} > 0.7\), while every
+    eigenvalue of \(A_0\) is equal to \(0\).
+
+    \begin{solution}
+      \begin{proof}
+
+      \end{proof}
+    \end{solution}
+  \end{enumerate}
+
+\item[P.11.42] Let \(\beta = \set{1, y, z, y^2, z^2, yz}\) and let
+  \(\Vspace = \lspan \beta\) be the complex vector space of
+  polynomials in two variables \(y\) and \(z\) that have degree at
+  most \(2\).  Let \(T \in L(\Vspace)\) be the partial differentiation
+  operator \(T \colon p \mapsto \pd p y\).  Find the Jordan canonical
+  form of \(_\beta[T]_\beta\).
+
+  \begin{solution}
+
+  \end{solution}
+
+\item[P.11.47] Let \(A \in \M_5\).  If \(p_A(z) = (z-2)^3 (z+4)^2\)
+  and \(m_A(z) = (z-2)^2 (z+4)\), what is the Jordan canonical form of
+  \(A\)?
+
+  \begin{solution}
+
+  \end{solution}
+\end{problems}
+\end{document}
