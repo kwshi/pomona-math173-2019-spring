@@ -38,6 +38,7 @@
 \RequirePackage{stackrel}
 \RequirePackage{lastpage}
 \RequirePackage{multicol}
+\RequirePackage{multirow}
 \RequirePackage{color}
 \RequirePackage{tikz}
 \RequirePackage{pgfplots}
@@ -49,6 +50,7 @@
 \RequirePackage{subcaption}
 \RequirePackage[inline]{enumitem}
 \RequirePackage{fancyref}
+\RequirePackage{booktabs}
 
 % document setup
 %% page dimensions
