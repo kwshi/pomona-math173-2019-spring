@@ -34,6 +34,7 @@
 
 %% utility packages
 \RequirePackage{mdframed}
+\RequirePackage{soul}
 \RequirePackage{cancel}
 \RequirePackage{stackrel}
 \RequirePackage{lastpage}
@@ -163,6 +164,7 @@
 
 \declaretheorem[style=book, name=Theorem]{booktheorem}
 \declaretheorem[style=book, name=Example]{bookexample}
+\declaretheorem[style=book, name=Lemma]{booklemma}
 \declaretheorem[style=book, name=Corollary]{bookcorollary}
 
 \declaretheorem[style=theorem]{claim}

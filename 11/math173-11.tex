@@ -1,0 +1,208 @@
+\documentclass{../homework}
+
+\homework{11}
+\date{Tuesday 4/23}
+
+\author{}
+\coauthor{}
+
+\begin{document}
+\begin{problems}
+\item[P.12.8] If \(A \in \M_{m \times n}\) and \(A^* A\) is an
+  orthogonal projection, is \(AA^*\) an orthogonal projection?
+
+  \begin{solution}
+
+  \end{solution}
+
+\item[P.12.11]
+  \begin{enumerate}
+  \item If \(B \in \M_n\), show that
+    \[
+      A = \begin{bmatrix} B & B^* \\ B^* & B \end{bmatrix}
+    \]
+    is normal.
+
+    \begin{solution}
+      \begin{proof}
+
+      \end{proof}
+    \end{solution}
+
+  \item Let \(B = H + iK\) be a Cartesian decomposition (12.6.5) and
+    let
+    \[
+      U = \frac{1}{\sqrt 2}
+      \begin{bmatrix}
+        I_n & I_n \\ -I_n & I_n
+      \end{bmatrix}.
+    \]
+    Show that \(U\) is unitary and \(UAU^* = 2H \oplus 2 iK\).
+
+    \begin{solution}
+      \begin{proof}
+
+      \end{proof}
+    \end{solution}
+
+  \item Show that \(A\) has \(n\) real eigenvalues and \(n\) purely
+    imaginary eigenvalues.
+
+    \begin{solution}
+      \begin{proof}
+
+      \end{proof}
+    \end{solution}
+
+  \item Show that \(\det A = (4i)^n (\det H) (\det K)\).
+
+    \begin{solution}
+      \begin{proof}
+
+      \end{proof}
+    \end{solution}
+
+  \item If \(B\) is normal and has eigenvalues
+    \(\lambda_1, \lambda_2, \dots, \lambda_n\), show that
+    \(\det A = (4i)^n \prod_{j=1}^n (\Re \lambda_i)(\Im \lambda_i)\).
+
+    \begin{solution}
+      \begin{proof}
+
+      \end{proof}
+    \end{solution}
+  \end{enumerate}
+
+\item[P.12.14] If \(A \in \M_n\) is normal and \(A^2 = A\), prove that
+  \(A\) is an orthogonal projection.  Can the hypothesis of normality
+  be omitted?
+
+  \begin{solution}
+    \begin{proof}
+
+    \end{proof}
+  \end{solution}
+
+\item[P.12.21] Suppose that \(P_1, P_2, \dots, P_d \in \M_n\) are a
+  resolution of the identity.  Prove that there exists a partitioned
+  unitary matrix
+  \(U = \begin{bmatrix} U_1 & U_2 & \cdots & U_d \end{bmatrix} \in
+  \M_n\) such that \(P_i = U_i U_i^*\) for \(i = 1, 2, \dots, d\).
+  Conclude that every resolution of the identity arises in the manner
+  described in Lemma 12.9.6.
+
+  \begin{booklemma}[12.9.6]
+    Let
+    \(U = \begin{bmatrix} U_1 & U_2 & \cdots & U_d \end{bmatrix} \in
+    \M_n\) be a unitary matrix, in which each
+    \(U_i \in \M_{n \times n_i}\) nd \(n_1 + n_2 + \dots + n_d =n\).
+    Then \(P_i = U_i U_i^*\) for \(i = 1, 2, \dots, d\) are orthogonal
+    projections that form a resolution of the identity.
+  \end{booklemma}
+
+  \begin{solution}
+    \begin{proof}
+
+    \end{proof}
+  \end{solution}
+
+\item[P.12.26] Consider the \emph{Volterra operator}
+  \[
+    (Tf)(t) = \int_0^t f(s) \dif s
+  \]
+  on \(C[0, 1]\) (see P.5.11 and P.8.27).  Write \(T = H + iK\), in
+  which \(H = \frac 1 2 \Paren{T + T^*}\) and
+  \(K = \frac{1}{2i} \Paren{T - T^*}\).
+  \begin{enumerate}
+  \item Show that \(2H\) is the orthogonal projection onto the
+    subspace of constant functions.
+
+    \begin{solution}
+      \begin{proof}
+
+      \end{proof}
+    \end{solution}
+
+  \item Compute the eigenvalues and eigenvectors of \(K\).
+    \textit{Hint}: Use the fundamental theorem of calculus.  Be sure
+    that your prospective eigenvectors satisfy your original integral
+    equation.
+
+    \begin{solution}
+
+    \end{solution}
+
+  \item Verify that the eigenvalues of \(K\) are real and that the
+    eigenvectors corresponding to distinct eigenvalues are orthogonal.
+
+    \begin{solution}
+
+    \end{solution}
+  \end{enumerate}
+
+\item[P.12.37] Let \(A, B \in \M_n\) be Hermitian.  Prove that
+  \(\rank (AB)^k = \rank (BA)^k\) for all \(k = 1, 2, \dots\).  Deduce
+  from Corollary 11.9.5 that \(AB\) is similar to \(BA\).
+
+  \begin{bookcorollary}[11.9.5]
+    Let \(A, B \in \M_n\).  Then \(AB\) is similar to \(BA\) if and
+    only if \(\rank (AB)^p = \rank (BA)^p\) for each
+    \(p = 1, 2, \dots, n\).
+  \end{bookcorollary}
+
+  \begin{solution}
+    \begin{proof}
+
+    \end{proof}
+  \end{solution}
+
+\item[P.12.44] Let \(\lambda_1, \lambda_2, \dots, \lambda_n \in \RR\)
+  and suppose that \(\lambda_1 + \lambda_2 + \dots + \lambda_n = 0\).
+  Show that there is an \(n \times n\) Hermitian matrix with zero main
+  diagonal and eigenvalues \(\lambda_1, \lambda_2, \dots, \lambda_n\).
+
+  \begin{solution}
+    \begin{proof}
+
+    \end{proof}
+  \end{solution}
+
+\item[P.12.47] Let \(\Vspace\) denote the inner product space of
+  finitely nonzero bilateral complex sequences
+  \(\vec a = (\dots, a_{-1}, \underline{a_0}, a_1, \dots)\), in which
+  the underline denotes the zeroth position.  The inner product on
+  \(\Vspace\) is
+  \(\inner{\vec a, \vec b} = \sum_{n=-\infty}^{\infty} a_n
+  \overline{b_n}\).  Let \(U \in L(\Vspace)\) be the \emph{right-shift
+    operator}
+  \(U(\dots, a_{-1}, \underline{a_0}, a_1, \dots) = (\dots, a_{-2},
+  \underline{a_{-1}}, a_0, \dots).\)
+  \begin{enumerate}
+  \item Compute \(U^*\), the adjoint of \(U\), and show that
+    \(U^* U = U U^*\).
+
+    \begin{solution}
+
+    \end{solution}
+
+  \item Show that there is a subspace \(\Uspace\) of \(\Vspace\) that
+    is invariant under \(U\), but not under \(U^*\).  Compare with
+    Theorem 12.9.15.
+
+    \begin{booktheorem}[12.9.15]
+      Let \(A \in \M_n\) be normal.
+      \begin{enumerate}
+      \item Every \(A\)-invariant subspace is \(A^*\)-invariant.
+      \item If \(P\) is the orthogonal projection onto an
+        \(A\)-invariant subspace, then \(AP = PA\).
+      \end{enumerate}
+    \end{booktheorem}
+
+    \begin{solution}
+      \begin{proof}
+
+      \end{proof}
+    \end{solution}
+  \end{enumerate}
+\end{problems}
+\end{document}
